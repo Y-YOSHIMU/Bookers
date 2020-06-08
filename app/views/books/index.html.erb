@@ -1,2 +1,16 @@
 <h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<% @books.each do |book| %>
+<% end %>
+
+
+
+
+<h2>New book</h2>
+
+<%= form_for(@book) do |f| %>
+	<h5>Title</h5>
+	<%= f.text_field :title %>
+	<h5>Body</h5>
+	<%= f.text_area :body %>
+	<br><%= f.submit 'Create Book' %>
+<% end %>
