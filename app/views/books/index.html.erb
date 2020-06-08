@@ -17,9 +17,9 @@
 				<%= book.body %>
 			</td>
 			<td>
-				<%= link_to "show", book_path(book.id) %>
-				<%= link_to "edit", edit_book_path(book.id) %>
-				<%= link_to "destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+				<%= link_to "Show", book_path(book.id) %>
+				<%= link_to "Edit", edit_book_path(book.id) %>
+				<%= link_to "Destroy", "/books/#{book.id}", method: :delete, "data-confirm" => "Are you sure?" %>
 			</td>
 		</tr>
 		<% end %>
