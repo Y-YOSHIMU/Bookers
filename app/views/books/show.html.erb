@@ -4,20 +4,21 @@
 </head>
 <body>
 	<% if flash[:notice] %>
-	<p class="created-message"><%= flash[:notice] %></p>
+		<p class="created-message"><%= flash[:notice] %></p>
 	<% end %>
-<table class="show-table">
-	<tr class="show-tr">
-		<th>Title:</th>
-		<td><%= @book.title %></td>
-	</tr>
-	<tr class="show-tr">
-		<th>Body:</th>
-		<td><%= @book.body %></td>
-	</tr>
-</table>
+	<table class="show-table">
+		<tr class="show-tr">
+			<th>Title:</th>
+			<td><%= @book.title %></td>
+		</tr>
+		<tr class="show-tr">
+			<th>Body:</th>
+			<td><%= @book.body %></td>
+		</tr>
+	</table>
 
 <%= link_to "Edit", edit_book_path(@book.id) %>
+|
 <a href="/books">Back</a>
 </body>
 </html>

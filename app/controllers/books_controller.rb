@@ -20,8 +20,8 @@ class BooksController < ApplicationController
   	if @book.save
   		flash[:notice] = "Book was successfully created."
   	redirect_to book_path(@book)
-  else
-  	render action: :index
+ 	else
+  		render action: :index
   	end
   end
 
@@ -34,7 +34,7 @@ class BooksController < ApplicationController
   	if @book.update_attributes(book_params)
   		flash[:notice] = "Book was successfully updated."
   	redirect_to book_path(@book)
-  else
+  	else
   	render action: :edit
   	end
   end
