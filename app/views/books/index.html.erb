@@ -3,15 +3,18 @@
 <head>
 </head>
 <body>
-<h1>Books</h1>
-<table>
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Body</th>
-			<th></th>
-		</tr>
-	</thead>
+	<% if flash[:notice] %>
+	<p class="created-message"><%= flash[:notice] %></p>
+	<% end %>
+	<h1>Books</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Body</th>
+				<th></th>
+			</tr>
+		</thead>
 	<tbody>
 		<% @books.each do |book| %>
 		<tr>
