@@ -3,6 +3,9 @@
 <head>
 </head>
 <body>
+	<% if flash[:notice] %>
+	<p class="created-message"><%= flash[:notice] %></p>
+	<% end %>
 <table class="show-table">
 	<tr class="show-tr">
 		<th>Title:</th>

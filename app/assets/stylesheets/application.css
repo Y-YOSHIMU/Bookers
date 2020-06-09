@@ -44,3 +44,12 @@ h2 {
 .show-tr {
 	padding: 20px 0 10px 20px;
 }
+.edit-link {
+	margin-top: 15px;
+}
+h4 {
+	margin-top: 15px;
+}
+.created-message {
+	color: green;
+}

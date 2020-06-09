@@ -24,7 +24,7 @@
 			<td>
 				<%= link_to "Show", book_path(book.id) %>
 				<%= link_to "Edit", edit_book_path(book.id) %>
-				<%= link_to "Destroy", "/books/#{book.id}", method: :delete, "data-confirm" => "Are you sure?" %>
+				<%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
 			</td>
 		</tr>
 		<% end %>
@@ -35,6 +35,7 @@
 <h2>New book</h2>
 
 <%= form_for(@book) do |f| %>
+<%= render 'layouts/error_messages', book: f.object %>
 	<h5>Title</h5>
 	<%= f.text_field :title %>
 	<h5>Body</h5>
